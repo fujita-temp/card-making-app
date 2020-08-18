@@ -1,0 +1,105 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+
+
+
+/*universal*/
+
+body {
+    background-color: rgb(202, 244, 250);
+    padding-top: 110px;
+}
+
+section {
+    overflow: auto;
+}
+  
+textarea {
+    resize: vertical;
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    font-family: serif;
+}
+  
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+  
+  
+p{
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+
+/*header*/
+
+header{
+    height:70px;
+    font-family: sans-serif;
+}
+
+#logo {
+    font-family: serif;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5%;
+    font-size: 2.2em;
+    color: rgb(130, 194, 247);
+    letter-spacing: -1px;
+    padding-top: 11.5px;
+    font-weight: bold;
+    &:hover {
+      color: rgb(59, 113, 138);
+      text-decoration: none;
+    }
+  }
+
+  .sign_logo{
+    font-family: serif;
+    overflow: hidden;
+    float: right;
+    margin-right: 5%;
+    padding-top: 5px;
+    line-height: 30px;
+    font-size: 1.4em;
+    white-space: nowrap;
+    list-style-type: none;
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+
+  /*home画面*/
+
+  .center {
+    text-align: center;
+    background-color: white;
+    margin-top: 110px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+    h3{
+        font-size: 1.2em;
+        letter-spacing: -1px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: normal;
+        color: #777;
+    }
+}
