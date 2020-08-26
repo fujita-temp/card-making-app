@@ -1,14 +1,40 @@
+<% provide(:title, "ホーム") %>
 <div class="center jumbotron">
-  <h1>アプリ名</h1>
+  <h1>よさぷろ</h1>
 
   <h2>
-    自分の名刺作ってみませんか？
+    よさこい用の名刺作ってみませんか？
   </h2>
 
   <h3>
-  画像を作成・ダウンロードするだけで、オンライン会議に使える名刺が作れます
+  自分の情報を入力するだけで、オンライン交流会に便利な名刺が作れます
   </h3>
 
-  <%= link_to "テンプレート１（使ってみる）", '/form', class: "btn btn-lg btn-info" %>
+  <div class=template>
+  <br>
+
+  <p>
+  <%= image_tag 'template1.png', size: "480x270", class:"template_img" %>
+  <br>
+  <%= link_to "テンプレート１（作ってみる）", '/form', class: "btn btn-lg btn-info w-480" %>
+  </p>
+
+  <br>
+  
+  <p>
+  <%= image_tag 'template2.png', size: "480x270", class:"template_img" %>
+  <br>
+  <%= link_to "テンプレート2（作ってみる）", '/form', class: "btn btn-lg btn-info w-480" %>
+  </p>
+
+  <br>
+
+  <p>
+  <%= image_tag 'template3.png', size: "480x270", class:"template_img" %>
+  <br>
+  <%= link_to "テンプレート3（作ってみる）", '/form', class: "btn btn-lg btn-info w-480" %>
+  </p>
+
+  </div>
 
 </div>

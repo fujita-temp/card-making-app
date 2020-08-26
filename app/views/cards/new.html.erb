@@ -1,32 +1,24 @@
 <script src=”jquery.js”></script>
 <script src=”garlic.js”></script>
-<div class = form>
-    <div class="center jumbotron">
+    <div class="form jumbotron">
         <%= form_for @card, url: '/result', data: { persist: 'garlic' } do |f| %>
-            <%= f.label :お名前 %>
+            
+            <%= f.label :チーム名 %>
+            <%= f.text_field :team, class: 'form-control', placeholder: '早稲田大学"踊り侍"' %>
+
+            <%= f.label :名前 %>
             <%= f.text_field :name, class: 'form-control', placeholder: "山田 太郎" %>
 
             <%= f.label :ふりがな %>
-            <%= f.text_field :name2, class: 'form-control', placeholder: "やまだ たろう" %>
+            <%= f.text_field :kana, class: 'form-control', placeholder: "やまだ たろう" %>
 
-            <%= f.label :組織名 %>
-            <%= f.text_field :company, class: 'form-control' ,placeholder: "株式会社〇〇" %>
+            <%= f.label :よさ名 %>
+            <%= f.text_field :nickname, class: 'form-control', placeholder: "よさこい大好きマン" %>
 
-            <%= f.label :役職名 %>
-            <%= f.text_field :position, class: 'form-control' ,placeholder: "エンジニア" %>
+            <%= f.label :回生 %>
+            <%= f.text_field :grade, class: 'form-control', placeholder: "１回生" %>
             
-            <%= f.label :郵便番号 %>
-            <%= f.text_field :address1, class: 'form-control' ,placeholder: "123-4567" %>
 
-            <%= f.label :所在地 %>
-            <%= f.text_field :address2, class: 'form-control' ,placeholder: "都道府県 市町村 番地"%>
-            
-            <%= f.label :メールアドレス %>
-            <%= f.text_field :mail, class: 'form-control' ,placeholder: "hoge@hoge.com" %>
-            
-            <%= f.label :電話番号 %>
-            <%= f.text_field :tell, class: 'form-control' ,placeholder: "012-3456-7891" %>
-            
             <br>
             <%= f.submit :名刺を作る%>
         <% end %>

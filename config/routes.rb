@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/result', to: 'cards#new'
   post '/result', to: 'cards#result'
   get 'images/ogp.png', to: 'images#ogp'
+  get '/download', to: 'cards#download'
   root 'static_pages#home'
 end
