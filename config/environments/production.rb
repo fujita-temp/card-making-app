@@ -10,6 +10,14 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  # Force all access to the app over SSL, use Strict-Transport-Security,
+  # and use secure cookies.
+  config.force_ssl = true
+
+  #remote: ! Precompiling assets failed.に対する対応のために追記
+  config.assets.initialize_on_precompile = false
+  config.assets.js_compressor = :uglifier
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

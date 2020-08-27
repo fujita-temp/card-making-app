@@ -16,6 +16,9 @@ gem 'bootstrap-sass'
 #OGP画像生成のために追記
 gem 'mini_magick'
 
+#remote: ! Precompiling assets failed.のエラーのために追記
+gem 'uglifier'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
