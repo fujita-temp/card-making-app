@@ -3,7 +3,7 @@
   <h2>名刺の作成が完了しました！</h2>
   <h3>気に入っていただけましたら是非ダウンロードしてご活用ください！</h3>
   <div id="card_logo">
-    <img src='card.png', size: "640x360", class:"template_img">
+    <%= image_tag '/card.png', size: "640x360", class:"template_img"%>
     <br>
   </div>
   <%= button_to 'ダウンロード', '/download', method: :get, class: 'btn btn-info w-640' %>

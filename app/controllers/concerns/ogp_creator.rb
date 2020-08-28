@@ -83,5 +83,3 @@ class OgpCreator
       text.to_s.scan(/.{1,#{INDENTION_COUNT}}/)[0...ROW_LIMIT].join("\n")
     end
   end
-
-  
