@@ -111,6 +111,49 @@ header{
   }
 }
 
+.twitter {
+  padding: 0.2em;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  color: #6091d3;/*文字色*/
+  background: #FFF;
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  a{
+    display: block;
+  }
+}
+.fa-twitter{
+  color: #6091d3;
+}
+
+.facebook {
+  padding: 0.2em;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  margin: 0px 15px;
+  font-weight: bold;
+  color: #202781;/*文字色*/
+  background: #FFF;
+  border: solid 3px #202781;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  a{
+    display: block;
+  }  
+}
+.fa-facebook{
+  color: #202781;
+}
+
+
+
+#tweet{
+  font-size: 1.2em;
+}
+
 .template{
   text-align: center;
   line-height: 8;

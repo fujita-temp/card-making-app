@@ -13,6 +13,9 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 #bootstrap使用のために追記
 gem 'bootstrap-sass'
 
+#awesome使用のために追記
+gem 'font-awesome-sass'
+
 #OGP画像生成のために追記
 gem 'mini_magick'
 
