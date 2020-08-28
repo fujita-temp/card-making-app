@@ -1,6 +1,6 @@
 class OgpCreator
     require 'mini_magick'  
-    BASE_IMAGE_PATH = './app/assets/images/base7.png'
+    BASE_IMAGE_PATH = './app/assets/images/base5.png'
     SEQUENCE_IMAGE_PATH = "./app/assets/images/card.png"
     FONT = './app/assets/fonts/ipam.ttf'
     COLOR = 'black'
