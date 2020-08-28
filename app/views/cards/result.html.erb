@@ -2,6 +2,7 @@
 <div class="result jumbotron">
   <h2>名刺の作成が完了しました！</h2>
   <h3>気に入っていただけましたら是非ダウンロードしてご活用ください！</h3>
+  
   <div id="card_logo">
     <br>
     <iframe src='/create' width="640" height="360" scrolling="no" frameborder="0" class="template_img" ></iframe>
@@ -9,5 +10,19 @@
   <p>
   <%= button_to 'ダウンロード', '/download', method: :get, class: 'btn btn-info w-640' %>
   </p>
-  
+  <br>
+  <div class=sns>
+    <div class="twitter">
+      <a href="http://twitter.com/share?text=よさこい用の名刺を作ったよ！オンライン交流会の背景に設定して使ってみてね！【よさぷろ】&url=https://dry-cove-52987.herokuapp.com/" 
+                onClick="window.open(encodeURI(decodeURI(this.href)), 
+                'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1');
+                return false;" rel="nofollow">
+                <i class="fab fa-twitter fa-2x"></i></a>
+    </div>
+    <div class="facebook">
+      <a href="https://www.facebook.com/share.php?url=https://dry-cove-52987.herokuapp.com/" rel="nofollow" target="_blank">
+      <i class="fab fa-facebook fa-2x"></i></i></a>
+    </div>
+  </div>
+
   </div>
