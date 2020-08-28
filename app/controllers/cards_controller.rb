@@ -12,43 +12,37 @@ class CardsController < ApplicationController
       @card = Card.new(card)
       text = @card.name
       image = OgpCreator.build(text).tempfile.open.read
-      #send_data image, :type => 'image/png',:disposition => 'inline'
 
       #作成した画像を保存（指定したパスに）するためのコード
-      #card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image = File.open("./public/assets/card.png", "w+b")
+      card_image = File.open("./app/assets/images/card.png", "w+b")
       card_image.write(image)
       card_image.close
 
       #ふりがなの入力
       text = @card.kana
       image = OgpCreator.build_furigana(text).tempfile.open.read
-      #card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image = File.open("./public/assets/card.png", "w+b")
+      card_image = File.open("./app/assets/images/card.png", "w+b")
       card_image.write(image)
       card_image.close
 
       #よさ名の入力
       text = @card.nickname
       image = OgpCreator.build_nickname(text).tempfile.open.read
-      #card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image = File.open("./public/assets/card.png", "w+b")
+      card_image = File.open("./app/assets/images/card.png", "w+b")
       card_image.write(image)
       card_image.close
 
       #チーム名名の入力
       text = @card.team
       image = OgpCreator.build_team(text).tempfile.open.read
-      #card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image = File.open("./public/assets/card.png", "w+b")
+      card_image = File.open("./app/assets/images/card.png", "w+b")
       card_image.write(image)
       card_image.close
 
       #回生の入力
       text = @card.grade
       image = OgpCreator.build_grade(text).tempfile.open.read
-      #card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image = File.open("./public/assets/card.png", "w+b")
+      card_image = File.open("./app/assets/images/card.png", "w+b")
       card_image.write(image)
       card_image.close
 
