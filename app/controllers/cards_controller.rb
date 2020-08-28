@@ -8,7 +8,7 @@ class CardsController < ApplicationController
     def result
       #ファイルの作成に関するコード
       #画像のイメージを立ち上げ、名前の入力を完了させる
-      card = params[:card].permit(:team, :name, :kana, :nickname, :grade)
+      card = params[:card].permit(:team, :name, :kana, :nickname, :grade, :image)
       @card = Card.new(card)
       text = @card.name
       image = OgpCreator.build(text).tempfile.open.read
@@ -46,10 +46,18 @@ class CardsController < ApplicationController
       card_image.write(image)
       card_image.close
 
+      @card.image = "./app/assets/images/card.png"
     end
   
     def ogp_params
       params.permit(:text)
+    end
+
+    def create_image
+      send_file "./app/assets/images/card.png",
+                     filename: '名刺.png',
+                     type: 'image/png',
+                     disposition: 'inline'
     end
 
     def download
