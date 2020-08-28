@@ -1,6 +1,6 @@
 class OgpCreator
     require 'mini_magick'  
-    BASE_IMAGE_PATH = './app/assets/images/base4.png'
+    BASE_IMAGE_PATH = './app/assets/images/base7.png'
     SEQUENCE_IMAGE_PATH = "./app/assets/images/card.png"
     FONT = './app/assets/fonts/ipam.ttf'
     COLOR = 'black'
@@ -17,8 +17,8 @@ class OgpCreator
         config.font FONT
         config.fill COLOR
         config.gravity "northwest"
-        config.pointsize 55
-        config.draw "text 60,75 '#{text}'"
+        config.pointsize 30
+        config.draw "text 30,37.5 '#{text}'"
       end
     end
 
@@ -31,8 +31,8 @@ class OgpCreator
         config.font FONT
         config.fill COLOR
         config.gravity "northwest"
-        config.pointsize 45
-        config.draw "text 60,200 '#{text}'"
+        config.pointsize 25
+        config.draw "text 30,100 '#{text}'"
       end
     end
 
@@ -45,8 +45,8 @@ class OgpCreator
         config.font FONT
         config.fill COLOR
         config.gravity "northwest"
-        config.pointsize 75
-        config.draw "text 60,280 '#{text}'"
+        config.pointsize 40
+        config.draw "text 30,140 '#{text}'"
       end
     end
 
@@ -59,8 +59,8 @@ class OgpCreator
         config.font FONT
         config.fill COLOR
         config.gravity 'southwest'
-        config.pointsize 73
-        config.draw "text 60,60 '#{text}'"
+        config.pointsize 38
+        config.draw "text 30,30 '#{text}'"
       end
     end
 
@@ -72,8 +72,8 @@ class OgpCreator
         config.font FONT
         config.fill COLOR
         config.gravity "southwest"
-        config.pointsize 40
-        config.draw "text 65,150 '#{text}'"
+        config.pointsize 22
+        config.draw "text 32.5,75 '#{text}'"
       end
     end
 
