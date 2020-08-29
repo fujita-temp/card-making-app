@@ -2,26 +2,24 @@
 <script src=”jquery.js”></script>
 <script src=”garlic.js”></script>
     <div class="form jumbotron">
-        <%= form_for @card, url: '/result', data: { persist: 'garlic' } do |f| %>
-            
+      <h2>情報入力フォーム</h2>
+      <h3>名刺に含めたい情報を入力してください</h3>
+      <br>
+        <%= form_for @card, url: '/result', data: { persist: 'garlic' } do |f|%>
+          <div class="form_content">
             <%= f.label :チーム名 %>
-            <%= f.text_field :team, class: 'form-control', placeholder: '早稲田大学"踊り侍"' %>
-
+            <%= f.text_field :team, class: 'form-control', placeholder: '早稲田大学"踊り侍"' %><br>
             <%= f.label :名前 %>
-            <%= f.text_field :name, class: 'form-control', placeholder: "山田 太郎" %>
-
+            <%= f.text_field :name, class: 'form-control', placeholder: "鳴子 太郎" %><br>
             <%= f.label :ふりがな %>
-            <%= f.text_field :kana, class: 'form-control', placeholder: "やまだ たろう" %>
-
+            <%= f.text_field :kana, class: 'form-control', placeholder: "なるこ たろう" %><br>
             <%= f.label :よさ名 %>
-            <%= f.text_field :nickname, class: 'form-control', placeholder: "よさこい大好きマン" %>
-
+            <%= f.text_field :nickname, class: 'form-control', placeholder: "鳴子は友達" %><br>
             <%= f.label :回生 %>
-            <%= f.text_field :grade, class: 'form-control', placeholder: "１回生" %>
-            
-
-            <br>
-            <%= f.submit :名刺を作る%>
+            <%= f.text_field :grade, class: 'form-control', placeholder: "１回生" %><br>
+          </div>
+          <br>
+          <%= f.submit :名刺を作る, class:"submit"%>
         <% end %>
     </div>
 </div>
