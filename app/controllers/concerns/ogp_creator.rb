@@ -1,9 +1,9 @@
 class OgpCreator
     require 'mini_magick'  
-    BASE_IMAGE_PATH = './app/assets/images/base5.png'
+    BASE_IMAGE_PATH = './app/assets/images/base9.png'
     SEQUENCE_IMAGE_PATH = "./app/assets/images/card.png"
     FONT = './app/assets/fonts/ipam.ttf'
-    COLOR = 'black'
+    COLOR = 'white'
     INDENTION_COUNT = 16
     ROW_LIMIT = 8
   
