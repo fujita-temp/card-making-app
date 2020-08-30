@@ -2,6 +2,7 @@
 <script src=”jquery.js”></script>
 <script src=”garlic.js”></script>
     <div class="form jumbotron">
+    <%= params["update"] %>
       <h2>情報入力フォーム</h2>
       <h3>名刺に含めたい情報を入力してください</h3>
       <br>
@@ -19,7 +20,7 @@
             <%= f.text_field :grade, class: 'form-control', placeholder: "１回生" %><br>
           </div>
           <br>
-          <%= f.submit :名刺を作る, class:"submit", onfocus:"this.blur();"%>
+          <%= f.submit :名刺を作る, class:"submit", onfocus:"this.blur();", name:params["update"] %>
         <% end %>
     </div>
 </div>

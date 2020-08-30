@@ -1,6 +1,9 @@
 class CardsController < ApplicationController
 
 
+    def home
+      @card = Card.new
+    end
 
     def new
       @card = Card.new
