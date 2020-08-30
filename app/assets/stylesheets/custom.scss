@@ -89,6 +89,7 @@ header{
 
 /*home画面*/
 
+
 .center {
   text-align: center;
   background-color: white;
@@ -110,6 +111,7 @@ header{
   }
 }
 
+
 .twitter {
   display: inline-block;
   width: 120px;
@@ -122,6 +124,12 @@ header{
   }
   a{
     display: block;
+  }
+  &:hover{
+    .fa-twitter{
+    color: white;
+    }
+    background-color: #1091e7;
   }
 }
 
@@ -141,6 +149,12 @@ header{
   a{
     display: block;
   } 
+  &:hover{
+    .fa-facebook{
+    color: white;
+    }
+    background-color: #202781;
+  }
 }
 
 
@@ -160,17 +174,16 @@ header{
   font-size: 20px;
   width: 480px;
   height: 48px;
-  border: solid 3px #69cdfc;
+  border: solid 3px #67c5ff;
   color: black;
   line-height: 30px;
   &:hover{
-    background-color: #69cdfc;
+    background-color: #67c5ff;
     color: white;
   }
   &:active{
-    background-color: #69cdfc;
-    color: white;
-
+    box-shadow: 0px 0px;
+    padding: 0.30em 0em;
   }
 }
 
@@ -208,27 +221,20 @@ header{
 }
 
 
-.submit{
+.submit {
   font-size: 1.5em;
   padding: 0.2em;
   width: 100%;
-  color: white;
-  background-color: #67c5ff;
-  border: solid 2px #67c5ff;
+  color: black;
+  background-color: white;
+  border: solid 3px #67c5ff;
   line-height: 1.5;
   border-radius: 8px;
-  &:hover {
-    background: #44b3f8;
-    border: solid 2px #44b3f8;
-    color: rgb(238, 237, 237);
-  }
-  &:active{
-    border: solid 2px #44b3f8;
+  &:hover{
+    background: #67c5ff;
+    color: white;
   }
 }
-
-
-
 
 /*名刺完成画面*/
 
@@ -259,7 +265,40 @@ header{
 }
 
 .w-640{
-  width: 640px;
   font-size: 1.5em;
-  line-height: 1.2;
+  padding: 0.2em;
+  width: 640px;
+  color: black;
+  background-color: white;
+  border: solid 3px #67c5ff;
+  line-height: 1.5;
+  border-radius: 8px;
+  box-shadow: 0px 0px;
+  &:hover{
+    background: #67c5ff;
+    color: white;
+  }
+  &:active::before{
+    color: white;
+    border: solid 3px #44b3f8;
+    }
 }
+
+/*
+  font-size: 20px;
+  width: 640px;
+  height: 48px;
+  border: solid 3px #69cdfc;
+  background-color: white;
+  color: black;
+  line-height: 30px;
+  &:hover{
+    background-color: #69cdfc;
+    color: white;
+  }
+  &:active{
+    background-color: #69cdfc;
+    color: white;
+  }
+}
+*/
