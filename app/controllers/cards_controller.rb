@@ -10,53 +10,53 @@ class CardsController < ApplicationController
     end
     
     def result
-      #ファイルの作成に関するコード
-      #画像のイメージを立ち上げ、名前の入力を完了させる
-      card = params[:card].permit(:team, :name, :kana, :nickname, :grade, :image)
+
+      #名刺の作成に関するコード
+      #初期設定
+      card = params[:card].permit(:team, :name, :kana, :nickname, :grade, :template)
       @card = Card.new(card)
-      text = @card.name
-      image = OgpCreator.build(text).tempfile.open.read
+      image_path = "./app/assets/images/card.png"
+      template = './app/assets/images/base'+@card.template+'.png'
 
-      #作成した画像を保存（指定したパスに）するためのコード
-      card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image.write(image)
-      card_image.close
-
-      #ふりがなの入力
-      text = @card.kana
-      image = OgpCreator.build_furigana(text).tempfile.open.read
-      card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image.write(image)
-      card_image.close
-
-      #よさ名の入力
-      text = @card.nickname
-      image = OgpCreator.build_nickname(text).tempfile.open.read
-      card_image = File.open("./app/assets/images/card.png", "w+b")
-      card_image.write(image)
-      card_image.close
-
-      #チーム名名の入力
+      #チーム名の入力
       text = @card.team
-      image = OgpCreator.build_team(text).tempfile.open.read
-      card_image = File.open("./app/assets/images/card.png", "w+b")
+      image = OgpCreator.build_team(text, template).tempfile.open.read
+      card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
 
       #回生の入力
       text = @card.grade
       image = OgpCreator.build_grade(text).tempfile.open.read
-      card_image = File.open("./app/assets/images/card.png", "w+b")
+      card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
 
-      @card.image = "./app/assets/images/card.png"
+      #よさ名の入力
+      text = @card.nickname
+      image = OgpCreator.build_nickname(text).tempfile.open.read
+      card_image = File.open(image_path, "w+b")
+      card_image.write(image)
+      card_image.close
+
+      #名前の入力
+      text = @card.name
+      image = OgpCreator.build_name(text).tempfile.open.read
+      card_image = File.open(image_path, "w+b")
+      card_image.write(image)
+      card_image.close
+
+      #ふりがなの入力
+      text = @card.kana
+      image = OgpCreator.build_furigana(text).tempfile.open.read
+      card_image = File.open(image_path, "w+b")
+      card_image.write(image)
+      card_image.close
+      
     end
   
-    def ogp_params
-      params.permit(:text)
-    end
 
+    #作成した名刺を表記するための関数
     def create_image
       send_file "./app/assets/images/card.png",
                      filename: '名刺.png',
@@ -64,6 +64,7 @@ class CardsController < ApplicationController
                      disposition: 'inline'
     end
 
+    #作成した名刺をダウンロードするための機能
     def download
       send_file "./app/assets/images/card.png",
                 :filename => 'よさこい名刺.png'

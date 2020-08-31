@@ -1,7 +1,7 @@
 class OgpCreator
   require 'mini_magick'
   BASE_IMAGE_PATH = './app/assets/images/base4.png'
-  SEQUENCE_IMAGE_PATH = "./app/assets/images/card.png"
+  IMAGE_PATH = "./app/assets/images/card.png"
   FONT = './app/assets/fonts/ipam.ttf'
   COLOR = 'black'
   #1行に並ぶ最大文字数
@@ -9,12 +9,10 @@ class OgpCreator
   #最大行数
   ROW_LIMIT = 5
 
-
-
   #チーム名に関する条件
-  def self.build_team(text)
+  def self.build_team(text, template)
     text = prepare_text(text)
-    image = MiniMagick::Image.open(SEQUENCE_IMAGE_PATH)
+    image = MiniMagick::Image.open(template)
     image.combine_options do |config|        
       config.font FONT
       config.fill COLOR
@@ -28,7 +26,7 @@ class OgpCreator
   #回生に関する条件
   def self.build_grade(text)
     text = prepare_text(text)
-    image = MiniMagick::Image.open(SEQUENCE_IMAGE_PATH)
+    image = MiniMagick::Image.open(IMAGE_PATH)
     image.combine_options do |config|        
       config.font FONT
       config.fill COLOR
@@ -42,7 +40,7 @@ class OgpCreator
   #よさ名に関する条件
   def self.build_nickname(text)
     text = prepare_text(text)
-    image = MiniMagick::Image.open(SEQUENCE_IMAGE_PATH)
+    image = MiniMagick::Image.open(IMAGE_PATH)
     image.combine_options do |config|        
       config.font FONT
       config.fill COLOR
@@ -54,9 +52,9 @@ class OgpCreator
 
 
   #名前に関する条件
-  def self.build(text)
+  def self.build_name(text)
     text = prepare_text(text)
-    image = MiniMagick::Image.open(BASE_IMAGE_PATH)
+    image = MiniMagick::Image.open(IMAGE_PATH)
     image.combine_options do |config|        
       config.font FONT
       config.fill COLOR
@@ -69,7 +67,7 @@ class OgpCreator
   #振り仮名に関する条件
   def self.build_furigana(text)
     text = prepare_text(text)
-    image = MiniMagick::Image.open(SEQUENCE_IMAGE_PATH)
+    image = MiniMagick::Image.open(IMAGE_PATH)
     image.combine_options do |config|        
       config.font FONT
       config.fill COLOR

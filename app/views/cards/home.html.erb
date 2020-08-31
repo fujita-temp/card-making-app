@@ -27,11 +27,12 @@
 
   <div class=template>
   <br>
+  <%= form_for @card, url: '/form', data: { persist: 'garlic' } do |f|%>
 
     <p>
     <%= image_tag 'template1.png', size: "480x270", class:"template_img" %>
     <br>
-    <%= link_to "テンプレート１（作ってみる）", '/form', class: "btn w-480" %>
+    <%= f.submit 'テンプレート1（作ってみる）', name:'template', class: "w-480", onfocus:"this.blur();" %>
     </p>
 
     <br>
@@ -39,7 +40,7 @@
     <p>
     <%= image_tag 'template2.png', size: "480x270", class:"template_img" %>
     <br>
-    <%= link_to "テンプレート2（作ってみる）", '/form', class: "btn w-480" %>
+    <%= f.submit 'テンプレート2（作ってみる）', name:'template', class: "w-480", onfocus:"this.blur();" %>
     </p>
 
     <br>
@@ -47,7 +48,7 @@
     <p>
     <%= image_tag 'template5.png', size: "480x270", class:"template_img" %>
     <br>
-    <%= link_to "テンプレート3（作ってみる）", '/form', class: "btn w-480" %>
+    <%= f.submit 'テンプレート3（作ってみる）', name:'template',  class: "w-480", onfocus:"this.blur();" %>
     </p>
 
     <br>
@@ -55,15 +56,10 @@
     <p>
     <%= image_tag 'template3.png', size: "480x270", class:"template_img" %>
     <br>
-    <%= link_to "テンプレート4（作ってみる）", '/form', class: "btn w-480" %>
+    <%= f.submit 'テンプレート4（作ってみる）', name:'template',  class: "w-480", onfocus:"this.blur();" %>
     </p>
-
-
-    <%= form_for @card, url: '/form', data: { persist: 'garlic' } do |f|%>
-        <div class="form_content">
-        
-        <%= f.submit 'テンプレート１', name:'update' %>
-    <% end %>
+          
+  <% end %>
 
   </div>
 </div>
