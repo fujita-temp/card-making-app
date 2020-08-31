@@ -61,19 +61,7 @@
 
     <%= form_for @card, url: '/form', data: { persist: 'garlic' } do |f|%>
         <div class="form_content">
-          <%= f.label :チーム名 %>
-          <%= f.text_field :team, class: 'form-control', placeholder: '早稲田大学"踊り侍"' %><br>
-          <%= f.label :名前 %>
-          <%= f.text_field :name, class: 'form-control', placeholder: "鳴子 太郎" %><br>
-          <%= f.label :ふりがな %>
-          <%= f.text_field :kana, class: 'form-control', placeholder: "なるこ たろう" %><br>
-          <%= f.label :よさ名 %>
-          <%= f.text_field :nickname, class: 'form-control', placeholder: "鳴子は友達" %><br>
-          <%= f.label :回生 %>
-          <%= f.text_field :grade, class: 'form-control', placeholder: "１回生" %><br>
-        </div>
-        <br>
-        <%= f.submit :名刺を作る, class:"submit", onfocus:"this.blur();"%>
+        
         <%= f.submit 'テンプレート１', name:'update' %>
     <% end %>
 
