@@ -27,28 +27,28 @@ class CardsController < ApplicationController
 
       #回生の入力
       text = @card.grade
-      image = OgpCreator.build_grade(text).tempfile.open.read
+      image = OgpCreator.build_grade(text, template).tempfile.open.read
       card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
 
       #よさ名の入力
       text = @card.nickname
-      image = OgpCreator.build_nickname(text).tempfile.open.read
+      image = OgpCreator.build_nickname(text, template).tempfile.open.read
       card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
 
       #名前の入力
       text = @card.name
-      image = OgpCreator.build_name(text).tempfile.open.read
+      image = OgpCreator.build_name(text, template).tempfile.open.read
       card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
 
       #ふりがなの入力
       text = @card.kana
-      image = OgpCreator.build_furigana(text).tempfile.open.read
+      image = OgpCreator.build_furigana(text, template).tempfile.open.read
       card_image = File.open(image_path, "w+b")
       card_image.write(image)
       card_image.close
