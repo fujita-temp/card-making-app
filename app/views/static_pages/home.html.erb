@@ -1,0 +1,39 @@
+<% provide(:title, "ホーム") %>
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+      <br><%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <br>
+        <br>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3></h3>
+      <br>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+
+
+<% else %>
+  <div class="center jumbotron">
+   <div class ="home">
+    <h1>まわりの活躍を見つけてみよう</h1>
+    <h2>
+    みんなの頑張りを発見してみよう<br>
+    <br>
+    みんなの優しさを広めてみよう<br>
+    <br>
+    みんなの感謝を伝えてみよう<br>
+    </h2>
+   </div>
+  </div>
+<% end %>

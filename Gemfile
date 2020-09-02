@@ -22,6 +22,16 @@ gem 'mini_magick'
 #remote: ! Precompiling assets failed.のエラーのために追記
 gem 'uglifier'
 
+#パスワードの暗号化のために使用
+gem 'bcrypt'
+
+#表示数の制限に使用
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+#”〜前”を日本語表記に変更するために追記
+gem 'rails-i18n'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -43,6 +53,11 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+#いいね機能の追加に使用
+gem 'counter_culture'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

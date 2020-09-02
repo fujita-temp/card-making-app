@@ -1,0 +1,10 @@
+<div class=profile>
+    <%= link_to gravatar_for(current_user, size: 150), current_user %>
+    <h1><%= current_user.name %></h1>
+    <h2><span><%= link_to "プロフィールを変更", edit_user_path(current_user) %></span></h2>
+</div>
+
+<!--
+別の場所に転載
+<br><span>投稿数：<%= current_user.microposts.count %></span>
+-->
