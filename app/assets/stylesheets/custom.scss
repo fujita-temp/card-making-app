@@ -16,11 +16,9 @@ body {
     transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
 }
-
 section {
     overflow: auto;
-}
-  
+} 
 textarea {
     resize: vertical;
 }
@@ -28,20 +26,18 @@ textarea {
 
 
 /* typography */
-
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: serif;
 }
-
 h2, h3, h4, h5, h6 {
     line-height: 1;
     font-family: serif;
+    text-align: center;
 }
-  
-  
 p{
     font-size: 1.1em;
     line-height: 1.7em;
@@ -49,12 +45,10 @@ p{
 
 
 /*header*/
-
 header{
     height:70px;
     font-family: serif;
 }
-
 #logo {
     font-family: serif;
     float: left;
@@ -70,11 +64,180 @@ header{
       text-decoration: none;
     }
   }
+.sign_logo{
+  font-family: serif;
+  overflow: hidden;
+  float: right;
+  margin-right: 5%;
+  padding-top: 5px;
+  line-height: 30px;
+  font-size: 1.4em;
+  white-space: nowrap;
+  list-style-type: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+ul.nav a:hover { color: rgb(24, 24, 24) !important; }
+
+.navbar-toggle{
+  margin-right: 5%;
+  padding-top: 11.5px;
+  background-color: rgb(189, 184, 184);
+  border: white;
+}
 
 
-/*home画面*/
+/*home画面(ログイン前)*/
+.home{
+  text-align: center;
+  background-color: white;
+  margin-top: 30px;
+  h1 {
+    font-weight: bold;
+  } 
+  h2{
+    margin-top: 80px;
+    font-size: 2em;
+  }
+}
 
 
+/*home画面(ログイン後)*/
+.row{
+  font-family: serif;
+}
+.profile{
+  h1{
+    text-align: left;
+    font-size: 2.6em;
+  }
+  h2{
+    text-align: left;
+    font-size: 1.5em;
+  }
+}
+.stats{
+  text-align: right;
+  font-size: 1.1em;
+}
+/*sidebar*/
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+
+
+/*新規登録画面*/
+.register{
+  h3{
+    line-height: 60px;
+  }
+}
+.form_register{
+  font-family: serif;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 40px;
+  line-height: 2;
+}
+.w-100{
+  margin-top: 20px;
+  font-size: 1.3em;
+  width: 100%;
+  line-height: 1.1;
+  color: black;
+  background-color: white;
+  border: solid 3px #67c5ff;
+  border-radius: 8px;
+  &:hover{
+    background: #67c5ff;
+    color: white;
+  }
+  &:active::before{
+    color: white;
+    border: solid 3px #44b3f8;
+    }
+}
+
+
+/*ログイン画面*/
+.login{
+  margin-top:50px;
+  p{
+    margin-top: 40px;
+    text-align: right;
+  }
+}
+.form_login{
+  font-family: serif;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2;
+}
+.checkbox{
+  text-align: left;
+  margin-left: 27px;
+}
+input[type=checkbox] {
+  position: relative;
+  top: 8.5px;
+  transform: scale(1.5);
+}
+
+
+
+/*ユーザーリスト*/
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+.user_name{
+  letter-spacing: 2.0px;
+  font-size: 1.8em;
+}
+
+/*home画面(古)*/
 .center {
   text-align: center;
   background-color: white;
@@ -96,7 +259,6 @@ header{
   }
 }
 
-
 .twitter {
   display: inline-block;
   width: 120px;
@@ -117,7 +279,6 @@ header{
     background-color: #1091e7;
   }
 }
-
 
 .facebook {
   display: inline-block;
@@ -142,7 +303,6 @@ header{
   }
 }
 
-
 .template{
   text-align: center;
   line-height: 8;
@@ -150,11 +310,9 @@ header{
     line-height: 6;
   }
 }
-
 .template_img{
   box-shadow: 4px 4px 10px;
 }
-
 .w-480{
   font-size: 20px;
   width: 480px;
@@ -176,7 +334,6 @@ header{
 
 
 /*form入力画面*/
-
 .form{
   text-align: center;
   background-color: white;
@@ -270,4 +427,3 @@ header{
     border: solid 3px #44b3f8;
     }
 }
-

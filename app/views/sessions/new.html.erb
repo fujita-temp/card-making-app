@@ -1,29 +1,26 @@
 <% provide(:title, "ログイン") %>
+<div class="col-md-7 col-md-offset-3">
 <div class=login>
-  <h1>Prise Message Appにログイン</h1>
-  <br>
-  <br>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+  <div class="form_login">
       <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.label :メールアドレス %>
-        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.email_field :email, class: 'form-control' %><br>
 
         <%= f.label :パスワード %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.password_field :password, class: 'form-control' %><br>
 
         <%= f.label :remember_me, class: "checkbox inline" do %>
-          <br><%= f.check_box :remember_me %>
+          <%= f.check_box :remember_me %>
           <span>ログイン状態を保存する</span>
         <% end %>
 
         <br>
-        <br>
-        <%= f.submit "ログイン", class: "btn btn-primary" %>
+        <%= f.submit "ログイン", class: "btn w-100" ,onfocus:"this.blur();" %>
       <% end %>
 
       <p><br>新規登録は<%= link_to "こちら", signup_path %>から</p>
     </div>
+  </div>
   </div>
 <div>

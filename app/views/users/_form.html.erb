@@ -1,19 +1,19 @@
-<%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages', object: @user %>
-  
-    <%= f.label :"名前" %>
-    <%= f.text_field :name, class: 'form-control' %>
-  
-    <%= f.label :"メールアドレス" %>
-    <%= f.email_field :email, class: 'form-control' %>
-  
-    <%= f.label :"パスワード" %>
-    <%= f.password_field :password, class: 'form-control' %>
-  
-    <%= f.label :"パスワード（確認用）" %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-  
-    <div class="text-down">
-      <br><%= f.submit yield(:button_text), class: "btn btn-primary" %>
-    </div>
+<div class="form_register">
+  <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: @user %>
+    
+      <%= f.label :"名前" %>
+      <%= f.text_field :name, class: 'form-control' %><br>
+    
+      <%= f.label :"メールアドレス" %>
+      <%= f.email_field :email, class: 'form-control' %><br>
+    
+      <%= f.label :"パスワード" %>
+      <%= f.password_field :password, class: 'form-control' %><br>
+    
+      <%= f.label :"パスワード（確認用）" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+    
+      <%= f.submit yield(:button_text), class: "btn w-100" ,onfocus:"this.blur();"%>
   <% end %>
+</div>
