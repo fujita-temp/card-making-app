@@ -1,6 +1,8 @@
 <% if @feed_items.any? %>
   <ol class="microposts">
+    <div class="feed jumbotron">
     <%= render @feed_items %>
+    </div>
     <%= will_paginate @feed_items %>
   </ol>
 <% end %>

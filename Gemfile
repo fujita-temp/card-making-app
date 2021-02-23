@@ -32,6 +32,16 @@ gem 'bootstrap-will_paginate'
 #”〜前”を日本語表記に変更するために追記
 gem 'rails-i18n'
 
+#プロフィール画像のために追記
+gem 'carrierwave'
+
+
+#アカウント登録を他SNSでもおこなるようにするために追記
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
