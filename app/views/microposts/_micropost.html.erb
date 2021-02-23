@@ -1,13 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %> 
-  <span class="user"><br>送信元：<%= link_to micropost.user.name, micropost.user %></span>
-
-
-
-  <!--
-  <%= content_tag :span, "", class: "glyphicon glyphicon-heart-empty" %>
-  -->
-
   <span class="content">
   <br>
   <br>
@@ -16,7 +8,7 @@
   <span class="timestamp">
     <br> <%= time_ago_in_words(micropost.created_at) %>前に投稿
     <% if current_user?(micropost.user) %>
-      <br><%= link_to "削除", micropost, method: :delete,
+      <br><%= button_to "削除", micropost, method: :delete,
                                        data: { confirm: "本当に削除しますか?" } %>
     <% end %>
   </span>

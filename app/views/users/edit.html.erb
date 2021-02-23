@@ -10,3 +10,6 @@
     </div>
   </div>
 </div>
+<% if @user.avatar? %>  <!-- アップロード画像がある場合に実行する -->
+<%= image_tag @user.avatar.url, size:15*15 %><!-- userインスタンスの画像ファイルのURLを取得し表示 -->
+<% end %>
